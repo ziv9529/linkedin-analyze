@@ -1,0 +1,65 @@
+/**
+ * Card component styles with theme support
+ * Multiple variants for different visual treatments
+ */
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  transition: all var(--transition-base);
+
+  /* Remove default margin/padding from children headings first occurrence */
+  & > h1:first-child,
+  & > h2:first-child,
+  & > h3:first-child {
+    margin-top: 0;
+  }
+
+  & > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Default: Subtle depth with soft shadow */
+.card--default {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-xs);
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Elevated: Higher visual prominence */
+.card--elevated {
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-lg);
+  border: none;
+
+  &:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+  }
+}
+
+/* Outlined: Clear boundary, minimal depth */
+.card--outlined {
+  background-color: transparent;
+  border: 2px solid var(--border-primary);
+  box-shadow: none;
+
+  &:hover {
+    border-color: var(--color-accent);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1rem;
+  }
+}

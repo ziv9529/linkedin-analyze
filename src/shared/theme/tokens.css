@@ -1,0 +1,277 @@
+/**
+ * Design Tokens & Theme Variables
+ * Comprehensive color system for light and dark modes
+ * Inspired by editorial design with intentional, high-contrast palettes
+ */
+
+/* ========================================
+   LIGHT MODE (Default)
+   ======================================== */
+
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  /* Primary Colors */
+  --color-primary: #1f2937; /* Slate-900: Deep charcoal */
+  --color-primary-light: #374151; /* Slate-700 */
+  --color-primary-lighter: #6b7280; /* Slate-500 */
+
+  /* Accent: Editorial orange-red for emphasis */
+  --color-accent: #dc2626; /* Red-600: Bold, editorial feel */
+  --color-accent-light: #ef4444; /* Red-500 */
+  --color-accent-lighter: #fecaca; /* Red-200 */
+
+  /* Secondary: Muted teal for supporting actions */
+  --color-secondary: #0891b2; /* Cyan-700 */
+  --color-secondary-light: #06b6d4; /* Cyan-500 */
+  --color-secondary-lighter: #cffafe; /* Cyan-100 */
+
+  /* Backgrounds */
+  --bg-primary: #ffffff; /* Pure white canvas */
+  --bg-secondary: #f9fafb; /* Gray-50: Subtle depth */
+  --bg-tertiary: #f3f4f6; /* Gray-100: Elevated surfaces */
+  --bg-surface: #ffffff;
+  --bg-overlay: rgba(31, 41, 55, 0.5);
+
+  /* Text Colors */
+  --text-primary: #1f2937; /* Slate-900: High contrast */
+  --text-secondary: #6b7280; /* Slate-500: Muted, readable */
+  --text-tertiary: #9ca3af; /* Slate-400: Disabled/hints */
+  --text-inverse: #ffffff;
+
+  /* Borders & Dividers */
+  --border-primary: #e5e7eb; /* Gray-200 */
+  --border-secondary: #d1d5db; /* Gray-300 */
+  --border-subtle: #f3f4f6; /* Gray-100 */
+
+  /* States */
+  --state-success: #059669; /* Emerald-600 */
+  --state-warning: #d97706; /* Amber-600 */
+  --state-error: #dc2626; /* Red-600 */
+  --state-info: #0891b2; /* Cyan-700 */
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  --gradient-accent: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  --gradient-secondary: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+  --gradient-bg: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+
+  /* Opacity */
+  --opacity-hover: 0.9;
+  --opacity-disabled: 0.5;
+  --opacity-ghost: 0.7;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   DARK MODE
+   ======================================== */
+
+[data-theme='dark'] {
+  /* Primary Colors */
+  --color-primary: #f3f4f6; /* Gray-100: Bright text on dark */
+  --color-primary-light: #e5e7eb; /* Gray-200 */
+  --color-primary-lighter: #d1d5db; /* Gray-300 */
+
+  /* Accent: Keep vivid red-orange for visual pop */
+  --color-accent: #ff6b35; /* Vivid orange-red in dark */
+  --color-accent-light: #ff8a50; /* Lighter orange */
+  --color-accent-lighter: #2d1f1a; /* Very dark for background */
+
+  /* Secondary: Bright cyan for contrast */
+  --color-secondary: #22d3ee; /* Cyan-400 */
+  --color-secondary-light: #06b6d4; /* Cyan-500 */
+  --color-secondary-lighter: #164e63; /* Cyan-900 for backgrounds */
+
+  /* Backgrounds */
+  --bg-primary: #0f172a; /* Slate-950: Deep, sophisticated dark */
+  --bg-secondary: #1e293b; /* Slate-800: Elevated dark */
+  --bg-tertiary: #334155; /* Slate-700: Further elevation */
+  --bg-surface: #1e293b;
+  --bg-overlay: rgba(15, 23, 42, 0.7);
+
+  /* Text Colors */
+  --text-primary: #f3f4f6; /* Gray-100: High contrast */
+  --text-secondary: #cbd5e1; /* Slate-300: Muted but readable */
+  --text-tertiary: #94a3b8; /* Slate-400: Hints/disabled */
+  --text-inverse: #0f172a;
+
+  /* Borders & Dividers */
+  --border-primary: #334155; /* Slate-700 */
+  --border-secondary: #475569; /* Slate-600 */
+  --border-subtle: #1e293b; /* Slate-800 */
+
+  /* States */
+  --state-success: #10b981; /* Emerald-500 */
+  --state-warning: #f59e0b; /* Amber-500 */
+  --state-error: #ff6b35; /* Orange-red */
+  --state-info: #22d3ee; /* Cyan-400 */
+
+  /* Shadows - Softer in dark mode */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --gradient-accent: linear-gradient(135deg, #ff6b35 0%, #ff8a50 100%);
+  --gradient-secondary: linear-gradient(135deg, #0891b2 0%, #22d3ee 100%);
+  --gradient-bg: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+
+  /* Opacity */
+  --opacity-hover: 0.95;
+  --opacity-disabled: 0.4;
+  --opacity-ghost: 0.6;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   UNIVERSAL STYLES & TYPOGRAPHY
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* System font stack with custom fallbacks */
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  color-scheme: light dark;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* Typography: Strong, editorial feel */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-primary);
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--text-inverse);
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
